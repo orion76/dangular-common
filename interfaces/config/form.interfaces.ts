@@ -1,9 +1,7 @@
-import {IKeyValueList} from '@libcomm/interfaces';
-
-import * as Immutable from 'immutable';
-import {IMenuItem} from "@libcomm/config/interfaces/source-config";
-import {IButtons, IHTMLElementConfig} from "./html-element.interfaces";
-import {IField, TFieldConfig} from "@libcomm/interfaces/config/fields/types";
+import {InjectionToken} from '@angular/core';
+import { IKeyValueList} from '@dangular-common/interfaces';
+import {IMenuItem} from '@app-library/menu/types/types';
+import {IFormConfig} from '@dangular-forms/types/form.type';
 
 
 export interface IConfigMultiformTab {
@@ -11,19 +9,12 @@ export interface IConfigMultiformTab {
 }
 
 export interface IConfigMultiform {
-  tabs: IKeyValueList<IConfigMultiformTab>,
-  actions: IMenuItem[]
+  tabs: IKeyValueList<IConfigMultiformTab>;
+  actions: IMenuItem[];
 }
 
 
-export interface IFormConfig {
-  source?: string,
-  actions?: IButtons,
-  fields: TFieldConfig[],
-  elements?: IHTMLElementConfig[],
-}
-
-
+export const FORM_ENTITY_CONFIG = new InjectionToken<IFormConfig<any>>('FORM_ENTITY_CONFIG');
 
 
 export type TFormValue = IKeyValueList<any>;
