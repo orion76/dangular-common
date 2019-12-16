@@ -1,5 +1,5 @@
 import {IElementConfigBase, TElementType} from './form-common';
-import {IButton, tButtonLabelMode} from '../common';
+import {IButton, tButtonLabelMode} from './form.interfaces';
 
 export interface IHTMLElementConfig extends IElementConfigBase {
   type: TElementType;

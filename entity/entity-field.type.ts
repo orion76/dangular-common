@@ -1,5 +1,5 @@
-import {IEntity} from '@xangular-common/entity/types';
-import {TScalar} from '@xangular-store/metadata/types';
+import {TScalar} from '../metadata/types';
+import {IEntity} from './types';
 
 
 export type UFieldDataType = 'relationship' | 'text' | 'datetime' | 'integer' | 'link' ;
@@ -122,7 +122,7 @@ export class EntityFieldType implements IEntityFieldConfig {
   }
 
   get defaultValue() {
-    return this.defaultValue;
+    return null;
   }
 
   get view() {

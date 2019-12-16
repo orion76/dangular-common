@@ -1,6 +1,6 @@
-import * as Immutable from 'immutable';
 import {IEntity} from './types';
-import {TEntityFields} from '@xangular-common/form';
+import {TEntityFields} from '../form';
+import {Immutable} from 'immer';
 
 
 export function createEntity<T extends IEntity>(
@@ -24,13 +24,13 @@ export function createEntity<T extends IEntity>(
   return entity;
 }
 
-export class Entity<T extends IEntity> extends Immutable.Record({id: null, source: null, label: null}) {
-
-  constructor(fields?: Partial<T>) {
-    fields ? super(fields) : super();
-  }
-
-  with(values: Partial<T>) {
-    return this.merge(values) as this;
-  }
-}
+// export class Entity<T extends IEntity> extends Immutable.Record({id: null, source: null, label: null}) {
+//
+//   constructor(fields?: Partial<T>) {
+//     fields ? super(fields) : super();
+//   }
+//
+//   with(values: Partial<T>) {
+//     // return this.merge(values) as this;
+//   }
+// }

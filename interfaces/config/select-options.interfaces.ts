@@ -1,5 +1,5 @@
-import * as Immutable from 'immutable';
-import {IEntity} from '@xangular-common/entity';
+import {IEntity} from '../../entity';
+import {OrderedMap, Set} from 'immutable';
 
 
 export interface IFormEnumState {
@@ -12,7 +12,7 @@ export interface IFormEnumState {
 }
 
 
-export type TEnumFilters = Immutable.OrderedMap<string, Immutable.Set<string>>;
+export type TEnumFilters = OrderedMap<string, Set<string>>;
 
 
 

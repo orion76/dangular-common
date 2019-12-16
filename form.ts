@@ -1,5 +1,4 @@
-import {IEntityFieldConfig, UFieldDataType} from '@xangular-common/entity/entity-field.type';
-
+import {IEntityFieldConfig, UFieldDataType} from './entity';
 
 export interface IFormFieldType {
   // type: UFieldTypes;
