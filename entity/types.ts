@@ -5,11 +5,16 @@ export enum EEntityDeleted {
   DELETED = 20,
 }
 
+
 export interface IEntity {
   id: string;
   source: string;
-  title?: string;
+  type: string;
+  label: string;
   is_new?: boolean;
   deleted?: EEntityDeleted;
-  drupal_internal__id?: string;
+
+  getBundle(): string;
+
+  toRest();
 }

@@ -1,4 +1,5 @@
-import {GetSet} from '@xangular-store/metadata/getter';
+import {GetSet} from './getter';
+
 
 describe('GetSet', () => {
 
